@@ -1,0 +1,2 @@
+﻿Source.obj : error LNK2019: unresolved external symbol "public: static int __cdecl SearchingAlgorithms::Search::LinearSearch(int * const,int,int)" (?LinearSearch@Search@SearchingAlgorithms@@SAHQAHHH@Z) referenced in function _main
+C:\Users\sudixi\documents\visual studio 2015\Projects\SearchingLibrary\Debug\test.exe : fatal error LNK1120: 1 unresolved externals

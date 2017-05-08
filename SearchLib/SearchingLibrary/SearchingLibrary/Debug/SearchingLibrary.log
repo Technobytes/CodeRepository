@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SearchingLibrary.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  searchlib.cpp
+c:\users\sudixi\documents\visual studio 2015\projects\searchinglibrary\searchinglibrary\searchlib.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\sudixi\documents\visual studio 2015\projects\searchinglibrary\searchinglibrary\searchlib.cpp(138): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  SearchingLibrary.vcxproj -> C:\Users\sudixi\Documents\Visual Studio 2015\Projects\SearchingLibrary\Debug\searchinglib.lib
