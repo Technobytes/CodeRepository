@@ -1,0 +1,4 @@
+﻿  searchlib.cpp
+c:\users\sudixi\source\repos\coderepository\searchlib\searchinglibrary\searchinglibrary\searchlib.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\sudixi\source\repos\coderepository\searchlib\searchinglibrary\searchinglibrary\searchlib.cpp(136): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  SearchingLibrary.vcxproj -> C:\Users\sudixi\Source\Repos\CodeRepository\SearchLib\SearchingLibrary\x64\Debug\searchinglib.lib
