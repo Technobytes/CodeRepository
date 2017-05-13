@@ -17,3 +17,9 @@ namespace searchingalgos
 		static int DeleteHash(int key);
 	};
 }
+
+/*
+
+CopyRight Suraj.U.Dixit. All rights reserved
+
+*/
