@@ -1,6 +1,16 @@
+/*
+
+Copyright (c) by Suraj.U.Dixit. All rights reserved.
+
+code written and published by Suraj U Dixit
+
+*/
+
+#include<math.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<iostream>
+
 using namespace std;
 
 namespace searchingalgos
@@ -17,9 +27,3 @@ namespace searchingalgos
 		static int DeleteHash(int key);
 	};
 }
-
-/*
-
-CopyRight Suraj.U.Dixit. All rights reserved
-
-*/
