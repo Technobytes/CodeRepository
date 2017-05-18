@@ -1,7 +1,16 @@
+/*
+
+Copyright (c) by Suraj.U.Dixit. All rights reserved.
+
+code written and published by Suraj U Dixit
+
+*/
+
+
 #include "searchlib.h";
 namespace searchingalgos
 {
-
+	//Linear Search 
 	int Search::LinearSearch(int DataArray[], int Size, int SearchElement)
 	{
 		int flag = 0, position = 0;
@@ -30,6 +39,7 @@ namespace searchingalgos
 			return -1;
 		}
 	}
+	//Binary Search
 	int Search::BinarySearch(int DataArray[], int Size, int SearchElement)
 	{
 		int flag = 0;
@@ -71,7 +81,6 @@ namespace searchingalgos
 			if (DataArray[midPoint] == SearchElement)
 			{
 				flag = 1;
-				//position = midPoint;
 				break;
 			}
 			else
@@ -105,6 +114,8 @@ namespace searchingalgos
 		}
 
 	}
+
+	//Interpolation Search
 	int Search::InterPolationSearch(int Array[], int Size, int SearchElement)
 	{
 		int Temp = 0;
@@ -147,7 +158,7 @@ namespace searchingalgos
 		return -1;
 	}
 
-	//Hash Table
+	//Hash Table full
 	#define SIZE 100
 	struct DataItem
 	{
@@ -183,12 +194,12 @@ namespace searchingalgos
 
 			if (hashArray[hashIndex] = item)
 			{
-				printf("Successfully Entered Key -> %d",item->key);
+				printf("Successfully Entered Key -> %d\n",item->key);
 				return 0;
 			}
 			else
 			{
-				printf("There was an error while Inserting Key -> %d", item->key);
+				printf("There was an error while Inserting Key -> %d\n", item->key);
 				return -1;
 			}
 	}
