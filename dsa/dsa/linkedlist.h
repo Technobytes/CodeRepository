@@ -24,5 +24,6 @@ namespace datastructures
 		void displayList();
 		int insertAtPosition(int position, int data);
 		int deleteAtPosition(int position);
+		int totalNumberOfNodes();
 	};
 }
