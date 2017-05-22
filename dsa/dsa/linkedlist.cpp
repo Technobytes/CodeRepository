@@ -98,7 +98,7 @@ namespace datastructures
 		int data = tempnode->info;
 		start->next = tempnode->next;
 		cout << "data: " << data << " has been deleted from Linkedlist." << endl;
-		free(tempnode);
+		free(tempnode); //free the memory allocated
 		start->info--;
 		return data;
 	}
@@ -202,7 +202,7 @@ namespace datastructures
 		deletenode = temp->next;
 		cout << "data: " << deletenode->info << " deleted from position: " << position << endl;
 		temp->next = temp->next->next;
-		free(deletenode);
+		free(deletenode); //free the memory allocated
 		start->info--;
 		return 0;
 	}
