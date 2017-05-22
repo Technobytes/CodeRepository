@@ -14,8 +14,7 @@ int main()
 	}
 	cout << "Which node you want to search : ";
 	cin >> search;
-	int c = Search::LinearSearch(a, 10, search);
-	int b = Search::BinarySearch(a, 10, search);
+
 	//cout << "Linear Search : " << c << endl;
 	//cout << "Binary Search : " << b << endl;
 	if (c == 1)
