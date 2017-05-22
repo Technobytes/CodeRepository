@@ -11,9 +11,9 @@ namespace datastructures
 	class linkedList
 	{
 	private:
-		int info;
-		linkedList * next;
-		linkedList * start;
+		int info; //data in the node
+		linkedList * next; //address of next node
+		linkedList * start; //keeps the data about the number of nodes and address of the first node
 	public:
 		linkedList();
 		linkedList * createNode();

@@ -7,7 +7,7 @@ Code written and published by Suraj U Dixit.
 
 namespace datastructures 
 {
-
+	//Constructor
 	linkedList::linkedList()
 	{
 		start = createNode();
@@ -15,6 +15,7 @@ namespace datastructures
 		start->next = NULL;
 	}
 
+	//creates a new node as in allocates memory for the node
 	linkedList * linkedList::createNode()
 	{
 		linkedList * newnode;
@@ -28,6 +29,7 @@ namespace datastructures
 		}	
 	}
 
+	//inserts the data at the start of the linked list
 	int linkedList::insertAtStart(int data)
 	{
 		linkedList * newnode = createNode();
@@ -54,6 +56,7 @@ namespace datastructures
 		return 0;
 	}
 
+	//inserts the data at the end of the linkedlist
 	int linkedList::insertAtEnd(int data)
 	{
 		linkedList * newnode = createNode();
@@ -82,6 +85,7 @@ namespace datastructures
 		return 0;
 	}
 
+	//deletes a node from the starting point of the linked list
 	int linkedList::deleteAtStart()
 	{
 		linkedList * tempnode = createNode();
@@ -98,6 +102,7 @@ namespace datastructures
 		return data;
 	}
 
+	//deletes a node from the ending point of the linked list
 	int linkedList::deleteAtEnd()
 	{
 		linkedList * tempnode = createNode();
@@ -122,6 +127,7 @@ namespace datastructures
 		return data;
 	}
 
+	//Displays the Linked list
 	void linkedList::displayList()
 	{
 		cout << "\n-------Displaying Nodes---------" << endl;
@@ -137,6 +143,7 @@ namespace datastructures
 		cout << endl;
 	}
 
+	//Inserts a node after X number of nodes
 	int linkedList::insertAtPosition(int position, int data)
 	{
 		linkedList * newnode = createNode();
@@ -167,6 +174,7 @@ namespace datastructures
 		return 0;
 	}
 
+	//delets a node at X position
 	int linkedList::deleteAtPosition(int position)
 	{
 		linkedList * temp = createNode();
