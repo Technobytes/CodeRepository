@@ -16,14 +16,14 @@ namespace datastructures
 		linkedList * start; //keeps the data about the number of nodes and address of the first node
 	public:
 		linkedList();
-		linkedList * createNode();
-		int insertAtStart(int data);
-		int insertAtEnd(int data);
-		int deleteAtStart();
-		int deleteAtEnd();
-		void displayList();
-		int insertAtPosition(int position, int data);
-		int deleteAtPosition(int position);
-		int totalNumberOfNodes();
+		linkedList * createNode(); //allocates memory and creates a new node
+		int insertAtStart(int data); //inserts at the start of linked list
+		int insertAtEnd(int data); //inserts the data at the end of the linkedlist
+		int deleteAtStart(); //deletes a node from the starting point of the linked list
+		int deleteAtEnd(); //deletes a node from the ending point of the linked list
+		void displayList(); //Displays the Linked list
+		int insertAtPosition(int position, int data); //Inserts a node after X number of nodes
+		int deleteAtPosition(int position); //delets a node at X position
+		int totalNumberOfNodes(); //Return total number of nodes in the linked list
 	};
 }

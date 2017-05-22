@@ -207,6 +207,7 @@ namespace datastructures
 		return 0;
 	}
 
+	//Return total number of nodes in the linked list
 	int linkedList::totalNumberOfNodes()
 	{
 		cout << "Total Nodes: " << start->info << "\n" << endl;
