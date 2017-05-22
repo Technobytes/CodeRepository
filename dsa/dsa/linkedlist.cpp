@@ -7,7 +7,7 @@ Code written and published by Suraj U Dixit.
 
 namespace datastructures 
 {
-	//Constructor
+	//Constructor where in the start node is created and defined
 	linkedList::linkedList()
 	{
 		start = createNode();
