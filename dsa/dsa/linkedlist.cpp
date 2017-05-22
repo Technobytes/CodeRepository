@@ -19,7 +19,7 @@ namespace datastructures
 	linkedList * linkedList::createNode()
 	{
 		linkedList * newnode;
-		if(newnode = (linkedList *)malloc(sizeof(linkedList)))
+		if(newnode = (linkedList *)malloc(sizeof(linkedList))) //memory allocation
 		{
 			return newnode;
 		}
@@ -39,7 +39,7 @@ namespace datastructures
 
 		newnode->info = data;
 		newnode->next = NULL;
-
+		//first node
 		if (start->info == 0)
 		{
 			start->next = newnode;
@@ -74,6 +74,7 @@ namespace datastructures
 
 		tempnode = start->next;
 
+		//traverse to the last node of the list
 		while (tempnode->next != NULL)
 		{
 			tempnode = tempnode->next;
@@ -108,6 +109,7 @@ namespace datastructures
 		linkedList * tempnode = createNode();
 		tempnode = start->next;
 
+		//traverse to last but one node
 		while (tempnode->next->next != NULL)
 		{
 			tempnode = tempnode->next;
@@ -122,7 +124,7 @@ namespace datastructures
 		tempnode->next = NULL;
 		int data = lastnode->info;
 		cout << "data: " << data << " has been deleted from the Linkedlist" << endl;
-		free(lastnode);
+		free(lastnode); //free the memory allocated
 		start->info--;
 		return data;
 	}
@@ -133,6 +135,7 @@ namespace datastructures
 		cout << "\n-------Displaying Nodes---------" << endl;
 		linkedList * temp = createNode();
 		temp = start->next;
+		//traverse to each node and print the data
 		while (temp->next != NULL)
 		{
 			cout << temp->info << "->";
@@ -161,6 +164,7 @@ namespace datastructures
 
 		temp = start->next;
 
+		//traverse to the position after which the node needs to be inserted
 		for (int i = 0; i < position - 1; i++)
 		{
 			temp = temp->next;
@@ -184,6 +188,7 @@ namespace datastructures
 
 		temp = start->next;
 
+		//traverse to previous node of the node which needs to be deleted
 		for (int i = 0; i < position - 2; i++)
 		{
 			temp = temp->next;
