@@ -6,7 +6,7 @@ Code written and published by Suraj U Dixit.
 #include "search.h"
 namespace searchingAlgorithms
 {
-
+	//linear search
 	int Search::LinearSearch(int DataArray[], int Size, int SearchElement)
 	{
 		int flag = 0, position = 0;
@@ -35,6 +35,8 @@ namespace searchingAlgorithms
 			return -1;
 		}
 	}
+
+	//binary search
 	int Search::BinarySearch(int DataArray[], int Size, int SearchElement)
 	{
 		int flag = 0;
@@ -50,6 +52,7 @@ namespace searchingAlgorithms
 				position = i;
 		}
 
+		//sort array
 		for (int i = 0; i < Size; i++)
 		{
 			for (int j = 0; j < Size; j++)
@@ -71,6 +74,7 @@ namespace searchingAlgorithms
 				break;
 			}
 
+			//find out midpoint 
 			midPoint = lowerBound + ((upperBound - lowerBound) / 2);
 
 			if (DataArray[midPoint] == SearchElement)
@@ -110,6 +114,8 @@ namespace searchingAlgorithms
 		}
 
 	}
+
+	//interpolation search
 	int Search::InterPolationSearch(int Array[], int Size, int SearchElement)
 	{
 		int Temp = 0;
@@ -122,6 +128,7 @@ namespace searchingAlgorithms
 				position = i;
 		}
 
+		//sort the array
 		for (int i = 0; i < Size; i++)
 		{
 			for (int j = 0; j < Size; j++)
@@ -135,9 +142,10 @@ namespace searchingAlgorithms
 			}
 		}
 
+
 		while (lowerBound <= upperBound && SearchElement >= Array[lowerBound] && SearchElement <= Array[upperBound])
 		{
-
+			//find out midpoint
 			int pos = lowerBound + (((double)(upperBound - lowerBound)/(Array[upperBound] - Array[lowerBound]))*(SearchElement - Array[lowerBound]));
 
 			if (Array[pos] == SearchElement)
@@ -163,10 +171,12 @@ namespace searchingAlgorithms
 	struct DataItem* dummyItem;
 	struct DataItem* item;
 
+	//finds the hashcode
 	int hashCode(int key) {
 		return key % SIZE;
 	}
 
+	//inserts the key and value
 	int Search::InsertKeyValue(int key, int data)
 	{
 
@@ -198,6 +208,7 @@ namespace searchingAlgorithms
 			}
 	}
 
+	//display hash table
 	int Search::DisplayHash()
 	{
 		int i = 0;
@@ -214,6 +225,7 @@ namespace searchingAlgorithms
 		return 0;
 	}
 
+	//search the data based on key
 	struct DataItem *search(int key) {
 		//get the hash
 		int hashIndex = hashCode(key);
@@ -234,6 +246,7 @@ namespace searchingAlgorithms
 		return NULL;
 	}
 
+	//caller function
 	int Search::SearchHash(int key)
 	{
 		item = search(key);
@@ -247,6 +260,7 @@ namespace searchingAlgorithms
 		}
 	}
 
+	//delete the data based on key
 	struct DataItem* del(struct DataItem* item) {
 		int key = item->key;
 
@@ -274,6 +288,7 @@ namespace searchingAlgorithms
 		return NULL;
 	}
 
+	//caller function 
 	int Search::DeleteHash(int key)
 	{
 		item = search(key);
