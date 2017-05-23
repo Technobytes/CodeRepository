@@ -43,7 +43,7 @@ namespace datastructures
 		}
 	}
 
-	//peeks into the stack and returns the first element in the stack
+	//this Speeks into the stack and returns the first element in the stack
 	int stack::peek()
 	{
 		return dataArray[top];

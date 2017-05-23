@@ -14,7 +14,7 @@ namespace datastructures
 		int * dataArray;
 		int top;
 	public:
-		stack(); //constructor - sets default value for top
+		stack(); //constructor - it sets default value for top
 		int push(int val); //sets the size of the stack
 		int setSize(int size); //pushes data into the stack
 		int peek(); //peeks into the stack and returns the first element in the stack
