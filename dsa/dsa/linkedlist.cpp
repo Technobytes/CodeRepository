@@ -19,7 +19,7 @@ namespace datastructures
 	linkedList * linkedList::createNode()
 	{
 		linkedList * newnode;
-		if(newnode = (linkedList *)malloc(sizeof(linkedList))) //memory allocation
+		if(newnode = (linkedList *) malloc(sizeof(linkedList))) //memory allocation
 		{
 			return newnode;
 		}
