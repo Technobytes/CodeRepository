@@ -7,7 +7,7 @@ Code written and published by Suraj U Dixit.
 
 namespace datastructures
 {
-	//constructor - sets default value for top
+	//constructor - it sets default value for top
 	stack::stack()
 	{
 		top = -1;
