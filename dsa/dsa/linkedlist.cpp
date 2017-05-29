@@ -212,5 +212,39 @@ namespace datastructures
 		cout << "Total Nodes: " << start->info << "\n" << endl;
 		return start->info;
 	}
+
+	///returns data from a particular position
+	int linkedList::returnDataFromPosition(int position)
+	{
+		//out of limit
+		if (position == start->info)
+		{
+			cout << "There is no node at position: " << position << endl;
+			return -1;
+		}
+
+		//less than limit
+		else if (position < 0)
+		{
+			cout << "There is no node at position: " << position << endl;
+			return -1;
+		}
+
+		else
+		{
+			linkedList * tempnode = createNode();
+			
+			tempnode = start->next;
+			
+			//traverse to previous node of the given position
+			for (int i = 0; i < position - 1; i++)
+			{
+				tempnode = tempnode->next;
+			}
+
+			return tempnode->next->info;
+		}
+	}
+
 }
 
