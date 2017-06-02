@@ -233,17 +233,19 @@ namespace datastructures
 		else
 		{
 			linkedList * tempnode = createNode();
-			
 			tempnode = start->next;
-			
 			//traverse to previous node of the given position
 			for (int i = 0; i < position - 1; i++)
 			{
 				tempnode = tempnode->next;
 			}
-
 			return tempnode->next->info;
 		}
+	}
+
+	int linkedList::swapData(int position1, int position2)
+	{
+		
 	}
 
 }
