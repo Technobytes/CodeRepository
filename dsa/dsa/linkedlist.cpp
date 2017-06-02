@@ -243,10 +243,6 @@ namespace datastructures
 		}
 	}
 
-	int linkedList::swapData(int position1, int position2)
-	{
-		
-	}
 
 }
 
