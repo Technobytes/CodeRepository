@@ -26,5 +26,7 @@ namespace datastructures
 		int deleteAtPosition(int position); //delets a node at X position
 		int totalNumberOfNodes(); //Return total number of nodes in the linked list
 		int returnDataFromPosition(int position);//returns data from a particular position
+		int swapData(int oldPosition, int newPosition);//Swaps the content between 2 nodes
+		int sortList(int order);//Sorts the complete List
 	};
 }
