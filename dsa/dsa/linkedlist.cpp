@@ -233,136 +233,14 @@ namespace datastructures
 		else
 		{
 			linkedList * tempnode = createNode();
-			
 			tempnode = start->next;
-			
 			//traverse to previous node of the given position
 			for (int i = 0; i < position - 1; i++)
 			{
 				tempnode = tempnode->next;
 			}
-
 			return tempnode->next->info;
 		}
-	}
-
-	//Swaps the content between 2 nodes
-	int linkedList::swapData(int oldPosition, int newPosition)
-	{
-		cout << "Swapping Data from given positions....." << endl;
-
-		linkedList * oldNode = createNode();
-		linkedList * newNode = createNode();
-		linkedList * temp = createNode();
-
-		if (oldPosition >= start->info || newPosition >= start->info || oldPosition < 0 || newPosition < 0)
-			return -1;
-
-		if (oldNode == NULL)
-			return -1;
-
-		if (newNode == NULL)
-			return -1;
-
-		if (temp == NULL)
-			return -1;
-
-		oldNode = newNode = start->next;
-
-		//traverse to previous node of the given position
-		for (int i = 0; i < oldPosition; i++)
-		{
-			oldNode = oldNode->next;
-		}
-
-		for (int i = 0; i < newPosition; i++)
-		{
-			newNode = newNode->next;
-		}
-
-		//Swapping the data
-		temp->info = oldNode->info;
-		oldNode->info = newNode->info;
-		newNode->info = temp->info;
-		//swapping done
-
-		cout << "Data Swapped....." << endl;
-		return 0;
-	}
-
-	//Sorts the complete List
-	int linkedList::sortList(int order)
-	{
-		cout << "Sorting......" << endl;
-
-		linkedList * firstNode = createNode();
-		linkedList * lastNode = createNode();
-
-		if (firstNode == NULL)
-			return -1;
-
-		if (lastNode == NULL)
-			return -1;
-
-		int tempData = 0;
-		int isSwapped = 0;
-
-		lastNode = NULL;
-
-		//Bubble Sort
-
-		//Ascending Order
-		if (order == 0)
-		{
-			cout << "Ascending Order...." << endl;
-			do
-			{
-				firstNode = start->next;
-				isSwapped = 0;
-
-				while (firstNode->next != lastNode)
-				{
-					if (firstNode->info > firstNode->next->info)
-					{
-						tempData = firstNode->info;
-						firstNode->info = firstNode->next->info;
-						firstNode->next->info = tempData;
-						isSwapped = 1;
-					}
-					firstNode = firstNode->next;
-				}
-				lastNode = firstNode;
-			} while (isSwapped);
-		}
-
-		//Descending Order
-		if (order == 1)
-		{
-			cout << "Descending Order...." << endl;
-			do
-			{
-				firstNode = start->next;
-				isSwapped = 0;
-
-				while (firstNode->next != lastNode)
-				{
-					if (firstNode->info < firstNode->next->info)
-					{
-						tempData = firstNode->info;
-						firstNode->info = firstNode->next->info;
-						firstNode->next->info = tempData;
-						isSwapped = 1;
-					}
-					firstNode = firstNode->next;
-				}
-				lastNode = firstNode;
-			} while (isSwapped);
-		}
-		//Bubble Sort
-
-		cout << "Sorting finished........." << endl;
-
-		return 0;
 	}
 
 }
