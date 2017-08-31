@@ -26,9 +26,7 @@ namespace datastructures
 	void tree::insertRoot(int key)
 	{
 		if (root->info == 0)
-		{
 			root->info = key;
-		}
 		else
 		{
 			cout << "Already inserted" << endl;
@@ -45,9 +43,7 @@ namespace datastructures
 			tree * testnode = createNode();
 			testnode = rootForThisInstance->right;
 			if (node->info < testnode->info)
-			{
 				addNodeToLeft(node, testnode);
-			}
 			else
 				addNodeToRight(node, testnode);
 		}
@@ -56,21 +52,15 @@ namespace datastructures
 	void * tree::addNodeToLeft(tree * node, tree * rootForThisInstance)
 	{
 		if (rootForThisInstance->left == NULL)
-		{
 			rootForThisInstance->left = node;
-		}
 		else
 		{
 			tree * testnode = createNode();
 			testnode = rootForThisInstance->left;
 			if (node->info < testnode->info)
-			{
 				addNodeToLeft(node, testnode);
-			}
 			else
-			{
 				addNodeToRight(node, testnode);
-			}
 		}
 		return 0;
 	}
@@ -115,9 +105,7 @@ namespace datastructures
 	void tree::insertLeaf(int key)
 	{
 		if (root->info == 0)
-		{
 			exit(0);
-		}
 		tree * node = createNode();
 		node->info = key;
 		if (node->info < root->info)
